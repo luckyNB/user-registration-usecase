@@ -1,16 +1,16 @@
 #!/bin/bash
 
-function mobileNo(){
-	read -p "Enter mobileNo with country code:::" mobileNo
-	pattern="^[0-9]{2}[ ][0-9]{10}$"
+function password(){
+	read -p "Enter password" password
+	pattern="^[A-Z]{1,}[a-z]{8,}"
 
-	if [[ $mobileNo =~ $pattern ]]
+	if [[ $password =~ $pattern ]]
 	then
-		echo "valid mobileNo"
+		echo "valid password"
 	else
-		echo "Invalid mobileNo"
+		echo "Invalid password"
 	fi
 
 
 }
-mobileNo
+password
