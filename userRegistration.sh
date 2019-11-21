@@ -1,14 +1,14 @@
 #!/bin/bash
 
 function mobileNo(){
-	read -p "Enter emailI:::" firstName
-	pattern="[0-9a-zA-Z]+[._+-]{0,1}[0-9a-zA-Z]+[@][0-9a-zA-Z]+[.][a-zA-Z]{2,3}([.][a-z]{2}){0,1}$"
+	read -p "Enter mobileNo with country code:::" mobileNo
+	pattern="^[0-9]{2}[ ][0-9]{10}$"
 
-	if [[ $firstName =~ $pattern ]]
+	if [[ $mobileNo =~ $pattern ]]
 	then
-		echo "valid email"
+		echo "valid mobileNo"
 	else
-		echo "Invalid email"
+		echo "Invalid mobileNo"
 	fi
 
 
